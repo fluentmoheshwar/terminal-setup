@@ -5,8 +5,8 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#FEF5ED",
-          "foreground": "#011627",
+          "background": "#000000",
+          "foreground": "#ffffff",
           "properties": {
             "macos": "\uf179 ",
             "ubuntu": "\uf31b ",
@@ -18,8 +18,20 @@
           "type": "os"
         },
         {
-          "background": "#FEF5ED",
-          "foreground": "#011627",
+          "type": "shell",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#ffffff",
+          "background": "#000000",
+          "properties": {
+            "mapped_shell_names": {
+              "pwsh": "PS"
+            }
+          }
+        },
+        {
+          "background": "#000000",
+          "foreground": "#ffffff",
           "properties": {
             "time_format": "3:04PM"
           },
