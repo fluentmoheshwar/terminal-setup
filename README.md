@@ -53,6 +53,12 @@ Then goto Defaults>Appearance and set CaskaydiaCove NF as font.
 Install-Module PSReadLine -AllowPrerelease -Force
 ```
 
+- PowerType
+
+```powershell
+Install-Module PowerType -AllowPrerelease
+```
+
 - Terminal-Icons
 
 ```powershell
