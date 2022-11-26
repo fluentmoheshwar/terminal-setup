@@ -114,7 +114,7 @@ curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/pw
 - zsh
 
 ```bash
-curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/.zshrc" > ~/.zshrc
+curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/ohmyposh.yaml" > ~/ohmyposh.yaml && curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/.zshrc" > ~/.zshrc
 ```
 
 ## Stargazers
