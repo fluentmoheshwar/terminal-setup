@@ -61,7 +61,8 @@ PowerShell and zsh is the officially supported shell for this project. Using oth
   ```
 
 - zsh
-  zsh is preinstalled on macos. See [instructions for windows](https://dominikrys.com/posts/zsh-in-git-bash-on-windows/)
+  - zsh is preinstalled on macos.
+  - See [instructions for windows](https://dominikrys.com/posts/zsh-in-git-bash-on-windows/)
 
 ### Settings
 
@@ -95,7 +96,7 @@ Set your nerd font as default font in your terminal.
 
   - brew
 
-    ```zsh
+    ```bash
     brew install jandedobbeleer/oh-my-posh/oh-my-posh
     ```
 
@@ -103,6 +104,18 @@ Set your nerd font as default font in your terminal.
   - [Microsoft Store](ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK)
 
 ### Setup
+
+- PowerShell
+
+```powershell
+curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/pwsh.ps1" | pwsh
+```
+
+- zsh
+
+```bash
+curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/.zshrc" > ~/.zshrc
+```
 
 ## Stargazers
 
