@@ -4,15 +4,34 @@
 
 ## Steps
 
-### Install Windows Terminal
+### Install Terminal
 
-- [Microsoft Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-id&gl=ID) (Preferred)
-- [GitHub](https://github.com/Microsoft/Terminal)
-- winget
+Windows Terminal and Hyper is the officially supported terminal for this project. Using other terminal may or may not work.
 
-```powershell
-winget install --id=Microsoft.WindowsTerminal -e
-```
+- Windows Terminal
+
+  - [Microsoft Store](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-id&gl=ID) (Preferred)
+  - [GitHub](https://github.com/Microsoft/Terminal)
+  - winget
+
+  ```powershell
+  winget install --id=Microsoft.WindowsTerminal -e
+  ```
+
+- Hyper
+
+  - [Website](https://hyper.is/)
+  - winget
+
+  ```powershell
+  winget install hyper
+  ```
+
+  - brew
+
+  ```zsh
+  brew install hyper
+  ```
 
 ### Install Nerd Fonts
 
@@ -21,73 +40,69 @@ I recommend installing Caskaydia Cove Nerd Font Complete.
 
 [Download Nerd Fonts](https://www.nerdfonts.com/font-downloads)
 
-### Install PowerShell
+### Install shell
 
-- [Microsoft Store](https://www.microsoft.com/store/apps/9MZ1SNWT0N5D)
-- [GitHub](https://github.com/PowerShell/PowerShell)
-- winget
+PowerShell and zsh is the officially supported shell for this project. Using other shell may or may not work.
 
-```powershell
-winget install --id Microsoft.Powershell --source winget
-```
+- PowerShell
+
+  - [Microsoft Store](https://www.microsoft.com/store/apps/9MZ1SNWT0N5D)
+  - [GitHub](https://github.com/PowerShell/PowerShell)
+  - winget
+
+  ```powershell
+  winget install --id Microsoft.Powershell --source winget
+  ```
+
+  - brew
+
+  ```powershell
+  brew install Powershell
+  ```
+
+- zsh
+  zsh is preinstalled on macos. See [instructions for windows](https://dominikrys.com/posts/zsh-in-git-bash-on-windows/)
 
 ### Settings
 
-Open Windows Terminal and then go to Settings then set PowerShell as default profile.  
-Then goto Defaults>Appearance and set CaskaydiaCove NF as font.
+Set your nerd font as default font in your terminal.
+
+- Windows Terminal
+
+  1. Open the Windows Terminal app.
+  1. Click on the dropdown icon on the title bar.
+  1. Select “Settings” from the menu.
+  1. Select the shell of your choice on the sidebar.
+  1. Go to the “Appearance” tab.
+  1. Type the full font name in the “Font Face” field.
+  1. Click the “Save” button.
+  1. Close and reopen Windows Terminal.
+  1. With that, you’ve changed the default font face in Windows Terminal.
+
+- hyper
+
+[See instructions here](https://hyper.is/#:~:text=fontFamily,with%20optional%20fallbacks)
 
 ### Install dependencies
 
 - oh-my-posh
+
   - winget
 
     ```powershell
     winget install JanDeDobbeleer.OhMyPosh -s winget
     ```
 
+  - brew
+
+    ```zsh
+    brew install jandedobbeleer/oh-my-posh/oh-my-posh
+    ```
+
   - [GitHub](https://github.com/JanDeDobbeleer/oh-my-posh)
   - [Microsoft Store](ms-windows-store://pdp/?productid=XP8K0HKJFRXGCK)
-- PSReadline
-
-```powershell
-Install-Module PSReadLine -AllowPrerelease -Force
-```
-
-- PowerType
-
-```powershell
-Install-Module PowerType -AllowPrerelease
-```
-
-- Terminal-Icons
-
-```powershell
-Install-Module -Name Terminal-Icons -Repository PSGallery
-```
 
 ### Setup
-
-- Clone this repo
-
-```powershell
-git clone https://github.com/fluentmoheshwar/terminal-setup.git && cd terminal-setup
-```
-
-- Writes the PowerShell profile
-
-```powershell
-cat ".\Microsoft.PowerShell_profile.ps1" > $PROFILE
-```
-
-- Writes the oh-my-posh config
-
-```powershell
-cat ".\ohmyposh.json" > "~\ohmyposh.json"
-```
-
-- Configure Visual Studio Code (Optional)
-
-Set a nerd font in Visual Studio Code.
 
 ## Stargazers
 

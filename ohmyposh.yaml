@@ -1,0 +1,102 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+blocks:
+  - alignment: left
+    segments:
+      - background: "#000000"
+        foreground: "#ffffff"
+        properties:
+          macos: " "
+          ubuntu: " "
+          windows: " "
+        style: powerline
+        powerline_symbol: ""
+        template: " {{ if .WSL }}WSL at {{ end }}{{.Icon}}"
+        type: os
+      - type: shell
+        style: powerline
+        powerline_symbol: ""
+        foreground: "#ffffff"
+        background: "#000000"
+        properties:
+          mapped_shell_names:
+            pwsh: PS
+      - background: "#000000"
+        foreground: "#ffffff"
+        properties:
+          time_format: 3:04PM
+        style: powerline
+        powerline_symbol: ""
+        template: " Time: {{ .CurrentDate | date .Format }} "
+        type: time
+      - background: "#ff479c"
+        foreground: "#ffffff"
+        powerline_symbol: ""
+        properties:
+          style: folder
+        style: powerline
+        template: "  {{ .Path }} "
+        type: path
+      - background: "#33cc33"
+        foreground: "#193549"
+        powerline_symbol: ""
+        properties:
+          fetch_stash_count: true
+          fetch_status: true
+          fetch_upstream_icon: true
+        style: powerline
+        template:
+          " {{ .HEAD }} {{ .BranchStatus }}{{ if .Working.Changed }}  {{ .Working.String
+          }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if
+          .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}}
+           {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}}  {{ .WorktreeCount
+          }}{{ end }} "
+        type: git
+      - background: "#6CA35E"
+        foreground: "#ffffff"
+        powerline_symbol: ""
+        properties:
+          fetch_version: true
+        style: powerline
+        template: "  {{ if .Unsupported }}{{ else }}{{ .Full }}{{ end }} "
+        type: dotnet
+      - background: "#ff008c"
+        foreground: "#ffffff"
+        powerline_symbol: ""
+        properties:
+          fetch_package_manager: true
+        style: powerline
+        template:
+          " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{
+          .Full }}"
+        yarn_icon: "\uF61A"
+        npm_icon: "\uE71E"
+        type: node
+      - background: "#0099ff"
+        foreground: "#ffffff"
+        powerline_symbol: ""
+        style: powerline
+        template: "  "
+        type: root
+      - background: "#2e9599"
+        background_templates:
+          - "{{ if gt .Code 0 }}#f1184c{{ end }}"
+        foreground: "#ffffff"
+        powerline_symbol: ""
+        properties:
+          always_enabled: true
+        style: powerline
+        template: "  "
+        type: exit
+      - background: "#575656"
+        foreground: "#d6deeb"
+        properties:
+          style: roundrock
+          threshold: 0
+        style: powerline
+        powerline_symbol: ""
+        template: " {{ .FormattedMs }} "
+        type: executiontime
+    type: prompt
+final_space: true
+version: 2

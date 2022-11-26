@@ -1,4 +1,4 @@
-oh-my-posh --init --shell pwsh --config ~\ohmyposh.json | Invoke-Expression
+oh-my-posh --init --shell pwsh --config ~\ohmyposh.yaml | Invoke-Expression
 Import-Module PSReadLine
 Enable-PowerType
 Set-PSReadLineOption -PredictionSource HistoryAndPlugin -PredictionViewStyle ListView
