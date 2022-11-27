@@ -1,3 +1,4 @@
+$env:VIRTUAL_ENV_DISABLE_PROMPT = 1
 oh-my-posh --init --shell pwsh --config ~\ohmyposh.yaml | Invoke-Expression
 Import-Module PSReadLine
 Enable-PowerType

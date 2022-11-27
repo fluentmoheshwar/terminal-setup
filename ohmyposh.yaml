@@ -42,7 +42,7 @@ blocks:
         template: " Time: {{ .CurrentDate | date .Format }} "
 
       - type: path
-        background: "#ff479c"
+        background: "#00342c"
         foreground: "#ffffff"
         powerline_symbol: ""
         properties:
@@ -76,7 +76,7 @@ blocks:
         template: "  {{ if .Unsupported }}{{ else }}{{ .Full }}{{ end }} "
 
       - type: node
-        background: "#ff008c"
+        background: "#0366d6"
         foreground: "#ffffff"
         powerline_symbol: ""
         properties:
@@ -87,6 +87,14 @@ blocks:
           .Full }}"
         yarn_icon: ""
         npm_icon: ""
+
+      - type: python
+        display_mode : context
+        background: "#0366d6"
+        foreground: "#ffffff"
+        powerline_symbol: ""
+        style: powerline
+        template: "  {{ .Full }} "
 
       - type: root
         background: "#0099ff"
