@@ -1,9 +1,12 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
 
+console_title_template: "{{.Shell}} in {{.PWD}} {{if .Root}}(root){{end}}"
+
 blocks:
   - alignment: left
     segments:
-      - background: "#000000"
+      - type: os
+        background: "#001832"
         foreground: "#ffffff"
         properties:
           macos: " "
@@ -12,32 +15,43 @@ blocks:
         style: powerline
         powerline_symbol: ""
         template: " {{ if .WSL }}WSL at {{ end }}{{.Icon}}"
-        type: os
+
+      - type: "session"
+        background: "#001832"
+        foreground": "#ffffff"
+        template: " {{ if .SSHSession }}\uf817 {{ end }}{{ .UserName }}@{{ .HostName }} "
+        style: powerline
+        powerline_symbol: ""
+
       - type: shell
         style: powerline
         powerline_symbol: ""
         foreground: "#ffffff"
-        background: "#000000"
+        background: "#001832"
         properties:
           mapped_shell_names:
             pwsh: PS
-      - background: "#000000"
+
+      - type: time
+        background: "#001832"
         foreground: "#ffffff"
         properties:
           time_format: 3:04PM
         style: powerline
         powerline_symbol: ""
         template: " Time: {{ .CurrentDate | date .Format }} "
-        type: time
-      - background: "#ff479c"
+
+      - type: path
+        background: "#ff479c"
         foreground: "#ffffff"
         powerline_symbol: ""
         properties:
           style: folder
         style: powerline
         template: "  {{ .Path }} "
-        type: path
-      - background: "#33cc33"
+
+      - type: git
+        background: "#33cc33"
         foreground: "#193549"
         powerline_symbol: ""
         properties:
@@ -51,16 +65,18 @@ blocks:
           .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0}}
            {{ .StashCount }}{{ end }}{{ if gt .WorktreeCount 0}}  {{ .WorktreeCount
           }}{{ end }} "
-        type: git
-      - background: "#6CA35E"
+
+      - type: dotnet
+        background: "#6CA35E"
         foreground: "#ffffff"
         powerline_symbol: ""
         properties:
           fetch_version: true
         style: powerline
         template: "  {{ if .Unsupported }}{{ else }}{{ .Full }}{{ end }} "
-        type: dotnet
-      - background: "#ff008c"
+
+      - type: node
+        background: "#ff008c"
         foreground: "#ffffff"
         powerline_symbol: ""
         properties:
@@ -69,16 +85,18 @@ blocks:
         template:
           " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{
           .Full }}"
-        yarn_icon: "\uF61A"
-        npm_icon: "\uE71E"
-        type: node
-      - background: "#0099ff"
+        yarn_icon: ""
+        npm_icon: ""
+
+      - type: root
+        background: "#0099ff"
         foreground: "#ffffff"
         powerline_symbol: ""
         style: powerline
         template: "  "
-        type: root
-      - background: "#2e9599"
+
+      - type: exit
+        background: "#2e9599"
         background_templates:
           - "{{ if gt .Code 0 }}#f1184c{{ end }}"
         foreground: "#ffffff"
@@ -87,8 +105,9 @@ blocks:
           always_enabled: true
         style: powerline
         template: "  "
-        type: exit
-      - background: "#575656"
+
+      - type: executiontime
+        background: "#575656"
         foreground: "#d6deeb"
         properties:
           style: roundrock
@@ -96,7 +115,7 @@ blocks:
         style: powerline
         powerline_symbol: ""
         template: " {{ .FormattedMs }} "
-        type: executiontime
+
     type: prompt
 final_space: true
 version: 2
