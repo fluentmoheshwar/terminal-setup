@@ -107,6 +107,8 @@ Set your nerd font as default font in your terminal.
 
 - PowerShell
 
+The script seems to be extremely buggy I'm still trying to find way to fix these. For setup please copy and paste script from https://github.com/fluentmoheshwar/terminal-setup/blob/master/pwsh.ps1
+
 ```powershell
 curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/pwsh.ps1" | pwsh
 ```
