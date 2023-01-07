@@ -1,5 +1,7 @@
 # My Terminal Setup
 
+Automated setup script seems to be extremly buggy in recent versions of oh-my-posh and powershell. Please configure them manually.
+
 ![terminal-setup](https://socialify.git.ci/fluentmoheshwar/terminal-setup/image?description=1&descriptionEditable=This%20is%20how%20I%20customized%20my%20terminal.&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Dark)
 
 ## Steps
@@ -107,17 +109,19 @@ Set your nerd font as default font in your terminal.
 
 - PowerShell
 
-The script seems to be extremely buggy I'm still trying to find way to fix these. For setup please copy and paste script from https://github.com/fluentmoheshwar/terminal-setup/blob/master/pwsh.ps1
+The script below is buggy. Please configure manually. 
 
-```powershell
+~~```powershell
 curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/pwsh.ps1" | pwsh
-```
+```~~
 
 - zsh
 
-```bash
+The script below is buggy. Please configure manually. 
+
+~~```bash
 curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/ohmyposh.yaml" > ~/ohmyposh.yaml && curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/.zshrc" > ~/.zshrc
-```
+```~~
 
 ## Stargazers
 
