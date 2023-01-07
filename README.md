@@ -111,17 +111,17 @@ Set your nerd font as default font in your terminal.
 
 The script below is buggy. Please configure manually. 
 
-~~```powershell
+```powershell
 curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/pwsh.ps1" | pwsh
-```~~
+```
 
 - zsh
 
 The script below is buggy. Please configure manually. 
 
-~~```bash
+```bash
 curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/ohmyposh.yaml" > ~/ohmyposh.yaml && curl "https://raw.githubusercontent.com/fluentmoheshwar/terminal-setup/master/.zshrc" > ~/.zshrc
-```~~
+```
 
 ## Stargazers
 
