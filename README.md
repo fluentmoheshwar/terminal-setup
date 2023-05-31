@@ -1,8 +1,6 @@
 # My Terminal Setup
 
-Automated setup script seems to be extremly buggy in recent versions of oh-my-posh and powershell. Please configure them manually.
-
-![terminal-setup](https://socialify.git.ci/fluentmoheshwar/terminal-setup/image?description=1&descriptionEditable=This%20is%20how%20I%20customized%20my%20terminal.&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Dark)
+Deprecated! use https://github.com/fluentmoheshwar/shell instead
 
 ## Steps
 
